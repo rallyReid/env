@@ -1,7 +1,7 @@
 #colors
-COLOR_RED="\033[0;31m"
-COLOR_YELLOW="\033[0;33m"
-COLOR_GREEN="\033[0;32m"
+COLOR_RED="\033[0;31m" # ='\[\e[0;31m\]'
+COLOR_YELLOW="\033[0;33m" # ='\[\e[0;33m\]'
+COLOR_GREEN="\033[0;32m" # ='\[\e[0;32m\]'
 COLOR_OCHRE="\033[38;5;95m"
 COLOR_PURPLE="\033[0;35m"
 COLOR_CYAN="\033[0;35m"
