@@ -1,7 +1,7 @@
 #colors
-COLOR_RED="\033[0;31m"
-COLOR_YELLOW="\033[0;33m"
-COLOR_GREEN="\033[0;32m"
+COLOR_RED="\033[0;31m" # ='\[\e[0;31m\]'
+COLOR_YELLOW="\033[0;33m" # ='\[\e[0;33m\]'
+COLOR_GREEN="\033[0;32m" # ='\[\e[0;32m\]'
 COLOR_OCHRE="\033[38;5;95m"
 COLOR_PURPLE="\033[0;35m"
 COLOR_CYAN="\033[0;35m"
@@ -40,8 +40,10 @@ function git_branch {
   fi
 }
 
-PS1="\[$COLOR_WHITE\]COOL_NAME_HERE \[$COLOR_CYAN\]\w "           # basename of pwd
+# \u = user \h host name  \W curent directory, \w full path to pwd
+PS1="\[$COLOR_WHITE\][cake] \[$COLOR_CYAN\]\W "           # basename of pwd
 PS1+="\[\$(git_color)\]"                              # colors git status
 PS1+="\$(git_branch)"                                 # prints current branch
 PS1+="\[$COLOR_WHITE\] $ \[$COLOR_RESET\] "           # '#' for root, else '$'
 export PS1
+
