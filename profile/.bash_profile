@@ -40,8 +40,10 @@ function git_branch {
   fi
 }
 
-PS1="\[$COLOR_WHITE\]COOL_NAME_HERE \[$COLOR_CYAN\]\w "           # basename of pwd
+# \u = user \h host name  \W curent directory, \w full path to pwd
+PS1="\[$COLOR_WHITE\][cake] \[$COLOR_CYAN\]\W "           # basename of pwd
 PS1+="\[\$(git_color)\]"                              # colors git status
 PS1+="\$(git_branch)"                                 # prints current branch
 PS1+="\[$COLOR_WHITE\] $ \[$COLOR_RESET\] "           # '#' for root, else '$'
 export PS1
+
